@@ -1,4 +1,3 @@
-
 import Banner from "components/Banner";
 import Titulo from "components/Titulo";
 import Card from "components/Card";
