@@ -2,6 +2,8 @@ import Banner from "components/Banner";
 import Titulo from 'components/Titulo';
 import styles from './Player.module.css';
 import videos from 'json/db.json';
+import { useParams } from "react-router-dom";
+import NaoEncontrada from "pages/NaoEncontrada";
 
 function Player() {
     const parametros = useParams();
@@ -9,13 +11,16 @@ function Player() {
         return video.id === Number(parametros.id);
     }))
 
+    if (!video) {
+        return <NaoEncontrada />
+    }
+    
+
 return (
     <>
         <Banner imagem="player" />
         <Titulo>
             <h1>Player</h1>
-            //código suprimido
-
         </Titulo>
         <section className={styles.container}>
         <iframe
