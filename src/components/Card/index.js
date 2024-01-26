@@ -9,10 +9,10 @@ function Card({id, titulo, capa}) {
     const icone = !EhFavorito ? iconeFavoritar : iconeDesfavoritar;
     return (
         <div className={styles.container}>
-            <Link className={styles.link} to={`/${id}`}>
+            <link className={styles.link} to={`/${id}`}>
                 <img src={capa} alt="Capa do jogo" className={styles.capa}/>
                 <h2>{titulo}</h2>
-            </Link>
+            </link>
             <img src={icone}
             alt='Favoritar filme'
             className={styles.favoritar} 
